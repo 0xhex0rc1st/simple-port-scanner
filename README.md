@@ -19,4 +19,59 @@ A lightweight command-line port scanner built in **C++** using **Boost.Asio**. T
 ## 🧾 Usage
 
 ```bash
-./scanner [OPTIONS]
+./simple_port_scanner [OPTIONS]
+
+---
+
+## 🧾 Required
+
+| Option   | Description                     |
+|----------|---------------------------------|
+| `-t <IP>`| Target IP address (required)    |
+
+---
+
+## 🔌 Ports
+
+| Option   | Description                                                        |
+|----------|--------------------------------------------------------------------|
+| `-p <PORTS>` | Ports to scan. Ex: `80,443,1000-2000` or `*` for all ports     |
+| `-F`     | Fast scan (top 110 common ports)                                   |
+
+> ⚠️ Do **NOT** use `-p` and `-F` together.
+
+---
+
+## ⏱ Delay
+
+| Option   | Description                                                      |
+|----------|------------------------------------------------------------------|
+| `-D <ms>`| Delay (in milliseconds) between scans. Max allowed: `10000 ms`   |
+
+---
+
+## 📄 Output
+
+| Option     | Description                              |
+|------------|------------------------------------------|
+| `-O <file>`  | Save **all** scan results               |
+| `-Oo <file>` | Save **only open** ports                |
+| `-Oc <file>` | Save **only closed** ports              |
+| `-Ob <file>` | Save **only blocked** ports             |
+
+---
+
+## ⚙️ General
+
+| Option       | Description                     |
+|--------------|---------------------------------|
+| `-v`         | Verbose mode                    |
+| `-h`, `--help` | Display help and usage guide   |
+
+---
+
+## 🔧 Examples
+
+### Scan common ports on an IP:
+```bash
+./scanner -t 192.168.1.1
