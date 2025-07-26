@@ -74,4 +74,4 @@ A lightweight command-line port scanner built in **C++** using **Boost.Asio**. T
 
 ### Scan common ports on an IP:
 ```bash
-./scanner -t 192.168.1.1
+./simple_port_scanner -t 192.168.1.1
