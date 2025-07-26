@@ -20,7 +20,7 @@ A lightweight command-line port scanner built in **C++** using **Boost.Asio**. T
 
 ```bash
 ./simple_port_scanner [OPTIONS]
-
+```
 ---
 
 ## 🧾 Required
